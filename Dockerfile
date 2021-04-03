@@ -36,6 +36,6 @@ EXPOSE 80
 # Change $DATABASE_URL to your heroku postgres URL if you're not using
 # the primary postgres instance in your app
 CMD graphql-engine \
-    --database-url postgres://postgres:postgrespassword@192.168.1.9:5432/postgres \
+    --database-url $DATABASE_URL \
     serve \
-    --server-port 80
+    --server-port $PORT
