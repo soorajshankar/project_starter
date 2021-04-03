@@ -1,0 +1,27 @@
+{
+    "name": "My Custom App",
+    "description": "test app.",
+    "logo": "https://storage.googleapis.com/hasura-graphql-engine/console/assets/favicon.png",
+    "keywords": [
+      "database",
+      "api",
+      "graphql",
+      "heroku",
+      "postgres",
+      "hasura"
+    ],
+    "success_url": "/console",
+    "website": "https://sooraj.net",
+    "repository": "https://github.com/soorajshankar/project_starter.git",
+    "formation": {
+      "web": {
+        "quantity": 1
+      }
+    },
+    "stack": "container",
+    "addons": [
+      {
+        "plan": "heroku-postgresql:hobby-dev"
+      }
+    ]
+  }
