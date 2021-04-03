@@ -9,6 +9,8 @@ COPY . ./
 RUN npm run build
 # RUN find ./build/static/js -type f -name 'main.*.js' -exec sh -c 'x="{}"; mv "$x" "./build/static/js/main.js"' \;
 # RUN find ./build/static/css -type f -name 'main.*.css' -exec sh -c 'x="{}"; mv "$x" "./build/static/css/main.css"' \;
+RUN gzip /app/build/versioned/main.js
+RUN gzip /app/build/versioned/main.css
 
 #Build
 FROM hasura/graphql-engine:v2.0.0-alpha.4
@@ -28,8 +30,6 @@ ENV HASURA_GRAPHQL_CONSOLE_ASSETS_DIR='/app/'
 COPY --from=build /app/build/versioned /app/versioned
 COPY --from=build /app/build/versioned /app/versioned
 
-RUN gzip /app/versioned/main.js
-RUN gzip /app/versioned/main.css
 
 EXPOSE 80
 
@@ -39,3 +39,8 @@ CMD graphql-engine \
     --database-url $DATABASE_URL \
     serve \
     --server-port $PORT
+
+# CMD graphql-engine \
+#     --database-url postgres://postgres:postgrespassword@192.168.1.9:5432/postgres \
+#     serve \
+#     --server-port 80
