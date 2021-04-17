@@ -11,6 +11,9 @@
       "hasura"
     ],
     "success_url": "/console",
+    "scripts": {
+      "postdeploy": "sh ./bootstrap.sh"
+    },
     "website": "https://sooraj.net",
     "repository": "https://github.com/soorajshankar/project_starter.git",
     "formation": {
