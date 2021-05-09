@@ -1,30 +1,24 @@
-import React from 'react'
+import React, { useReducer } from "react";
 
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import MainContainer from "./components/MainContainer";
+import ErrorPage from "./components/ErrorPage";
+import { reducer, initialState } from "./actions/state";
 
 function App() {
+  const [state, dispatch] = useReducer(reducer, initialState);
   React.useEffect(() => {
-    const className = document.getElementById('content').className;
-    document.getElementById('content').className = className + ' show';
-    document.getElementById('loading').style.display = 'none';
+    const className = document.getElementById("content").className;
+    document.getElementById("content").className = className + " show";
+    document.getElementById("loading").style.display = "none";
   }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {state?.errors ? (
+        <ErrorPage dispatch={dispatch} />
+      ) : (
+        <MainContainer state={state} dispatch={dispatch} />
+      )}
     </div>
   );
 }
