@@ -17,12 +17,11 @@ const ADD_TODO_MUTATION = gql`
 const NewTodo = () => {
   const [text, setText] = useState("");
   const [addTodo, { data }] = useMutation(ADD_TODO_MUTATION);
-  console.log(data);
 
   return (
-    <div className="w-full flex mt-3">
+    <li className="w-full flex mt-3">
       <textarea
-        class="focus:outline-none focus:ring-2 focus:ring-purple-600 flex-grow bg-transparent border-b-2 border-gray-700"
+        class="focus:outline-none focus:ring-2 focus:ring-purple-600 flex-grow bg-transparent border-b-2 border-gray-700 pt-4"
         onChange={(e) => setText(e.target.value)}
         value={text}
         placeholder="Add todo here"
@@ -44,7 +43,7 @@ const NewTodo = () => {
       >
         Add
       </button>
-    </div>
+    </li>
   );
 };
 

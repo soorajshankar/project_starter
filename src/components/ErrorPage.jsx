@@ -9,7 +9,6 @@ const ErrorPage = ({ dispatch }) => {
       <button
         onClick={async () => {
           const resp = await initServer();
-          console.log(resp);
           if (!resp?.error) {
             dispatch({ type: SET_ERROR, payload: false });
           }

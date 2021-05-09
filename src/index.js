@@ -20,7 +20,6 @@ const wsLink = new WebSocketLink({
     reconnect: true,
   },
 });
-console.log(ENDPOINTS);
 const httpLink = new HttpLink({
   uri: ENDPOINTS.GQL_URL,
 });

@@ -24,7 +24,6 @@ export const initServer = async () => {
       method: "POST",
     });
     let metadataObj = await fetchMetadata();
-    console.log(metadataObj);
     const resp = await fetch("http://localhost:8080/v1/metadata", {
       body: JSON.stringify({
         type: "bulk",

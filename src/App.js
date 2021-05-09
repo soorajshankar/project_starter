@@ -12,7 +12,6 @@ function App() {
     document.getElementById("content").className = className + " show";
     document.getElementById("loading").style.display = "none";
   }, []);
-  console.log(state);
   return (
     <div className="App">
       {state?.errors ? (
