@@ -17,13 +17,17 @@ This is a boiler plate/sample project code that shows how to build one click dep
 </p>
 
 1. Click the above link
-  ![test](./docs/assets/heroku_1.png)
+  
+![heroku_screen](./docs/assets/heroku_1.png)
 2. Choose your app name 
-  ![test](./docs/assets/heroku_2.png)
+  
+![heroku_screen](./docs/assets/heroku_2.png)
 2. Make sure you replace the app name on the `HEROKU_APP_NAME` field, this will make sure the DB & Hasura is initialised with correct data. 
-  ![test](./docs/assets/heroku_3.png)
+  
+![heroku_screen](./docs/assets/heroku_3.png)
 3. Visit the newly created TODO APP
-  ![test](./docs/assets/TodoAppScr.png)
+  
+![app_screen](./docs/assets/TodoAppScr.png)
 
 * Using Docker 
 
