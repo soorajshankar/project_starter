@@ -11,7 +11,7 @@
   "repository": "https://github.com/soorajshankar/project_starter.git",
   "env": {
     "HEROKU_APP_NAME": {
-      "description": "Used to apply DB Migrations after deployment (Optional)",
+      "description": "Used to apply DB Migrations after deployment",
       "value": "https://CHANGE.herokuapp.com"
     }
   },
