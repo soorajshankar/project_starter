@@ -42,6 +42,7 @@ docker run -it --env HASURA_GRAPHQL_CONSOLE_ASSETS_DIR="/srv/console-assets/" --
 
 
 ##  Setting up dev environment
+
 ### Prerequisites
 * Docker Compose & Docker
 * NodeJS
